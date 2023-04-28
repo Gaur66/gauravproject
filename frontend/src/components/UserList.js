@@ -77,7 +77,7 @@ const customStyle= {
 
   return (
     <>
-    <div class="container-fluid">
+    <div className="container-fluid">
     <DataTable
 columns={columns}
 data={data}

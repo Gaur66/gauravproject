@@ -1,7 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { FormSchema } from './Schema/FormSchema';
 import { formSchema } from './Schema/FormSchema';
 import { useNavigate } from 'react-router-dom';
 const Home = () => {
@@ -57,17 +56,17 @@ nationality:''
 <form onSubmit={handleSubmit(formSubmitHandler)}>
   <div className="form-group row mb-3 mt-5">
     <h6>Personal Details</h6>
-    <label for="name" className="col-sm-1 col-form-label">Name</label>
+    <label htmlFor="name" className="col-sm-1 col-form-label">Name</label>
     <div className="col-sm-3">
       <input type="text" className="form-control" name="name" placeholder="Enter Name" {...register("name")}/>
       {errors.name?(<span style={{color:"red"}}>{errors.name.message}</span>):<></>}
     </div>
-    <label for="dob" className="col-sm-2 col-form-label" >Date of Birth or <p>Age </p> </label>
+    <label htmlFor="dob" className="col-sm-2 col-form-label" >Date of Birth or <p>Age </p> </label>
     <div className="col-sm-3">
       <input type="text" className="form-control" name="dob" placeholder="DD/MM/YYYY or Age in Years" {...register("dob")}/>
       {errors.dob?(<span style={{color:"red"}}>{errors.dob.message}</span>):<></>}
     </div>
-    <label for="sex" className="col-sm-1 col-form-label">Sex</label>
+    <label htmlFor="sex" className="col-sm-1 col-form-label">Sex</label>
     <div className="col-sm-2">
     <select className="form-select" aria-label="Default select example" name='sex' {...register("sex")}>
   <option value=""> Enter Sex</option>
@@ -79,12 +78,12 @@ nationality:''
     </div>
   </div>
   <div className="form-group row">
-    <label for="mobile" className="col-sm-1 col-form-label">Mobile</label>
+    <label htmlFor="mobile" className="col-sm-1 col-form-label">Mobile</label>
     <div className="col-sm-3">
       <input type="text" className="form-control" name="mobile" placeholder="Enter Mobile" {...register("mobile")}/>
       {errors.mobile?(<span style={{color:"red"}}>{errors.mobile.message}</span>):<></>}
     </div>
-    <label for="id" className="col-sm-2 col-form-label" >Govt Issued ID</label>
+    <label htmlFor="id" className="col-sm-2 col-form-label" >Govt Issued ID</label>
     <div className="col-sm-2  ">
     <select className="form-select" aria-label="Default select example" name="idtype" {...register("idtype")}>
   <option value=""> ID Type</option>
@@ -102,7 +101,7 @@ nationality:''
   <div className="form-group row mb-3 mt-3">
     <h6>Contact Details</h6>
    
-    <label for="guardianlabel" className="col-sm-1 col-form-label" >Guradian Details</label>
+    <label htmlFor="guardianlabel" className="col-sm-1 col-form-label" >Guradian Details</label>
     <div className="col-sm-1 ">
     <select className="form-select" aria-label="Default select example" name='guardianlabel' {...register("guardianlabel")}>
   <option value=""> Enter Label</option>
@@ -114,11 +113,11 @@ nationality:''
     <div className="col-sm-2">
       <input type="text" className="form-control" name="guardianName" placeholder=" Enter Guradian Name" {...register("guardianName")}/>
     </div>
-    <label for="email" className="col-sm-1 col-form-label">Email</label>
+    <label htmlFor="email" className="col-sm-1 col-form-label">Email</label>
     <div className="col-sm-3">
       <input type="email" className="form-control" name="email" placeholder="Enter Email" {...register("email")}/>
     </div>
-    <label for="emergencyno" className="col-sm-2 col-form-label">Emergency Contact Number</label>
+    <label htmlFor="emergencyno" className="col-sm-2 col-form-label">Emergency Contact Number</label>
     <div className="col-sm-2">
       <input type="text" className="form-control" name="emergencyno" placeholder="Enter Emergency No"  {...register("emergencyno")}/>
       {errors.emergencyno?(<span style={{color:"red"}}>{errors.emergencyno.message}</span>):<></>}
@@ -127,11 +126,11 @@ nationality:''
   </div>
   <div className="form-group row mb-3 mt-3">
     <h6>Personal Details</h6>
-    <label for="address" className="col-sm-1 col-form-label">Address</label>
+    <label htmlFor="address" className="col-sm-1 col-form-label">Address</label>
     <div className="col-sm-3">
       <input type="text" className="form-control" name="address" placeholder="Enter Address" {...register("address")}/>
     </div>
-    <label for="state" className="col-sm-1 col-form-label">State</label>
+    <label htmlFor="state" className="col-sm-1 col-form-label">State</label>
     <div className="col-sm-3">
     <select className="form-select" aria-label="Default select example" name="state" {...register("state")}>
   <option value=""> Enter State</option>
@@ -140,7 +139,7 @@ nationality:''
   <option value="bihar">bihar</option>
 </select>
     </div>
-    <label for="city" className="col-sm-1 col-form-label">City</label>
+    <label htmlFor="city" className="col-sm-1 col-form-label">City</label>
     <div className="col-sm-3">
     <select className="form-select" aria-label="Default select example" name="city" {...register("city")}>
   <option value=""> Enter City/Town/Village</option>
@@ -149,7 +148,7 @@ nationality:''
   <option value="noida">noida</option>
 </select>
     </div>
-    <label for="country" className="col-sm-1 col-form-label mt-2">Country</label>
+    <label htmlFor="country" className="col-sm-1 col-form-label mt-2">Country</label>
     <div className="col-sm-3 mt-2">
     <div className="form-group" style={{position:'relative'}}>
     <input type="text" className="form-control" name="country" {...register("country")}/>   
@@ -157,7 +156,7 @@ nationality:''
        </div>    
            
      </div>
-     <label for="pincode" className="col-sm-1 col-form-label mt-2">Pincode</label>
+     <label htmlFor="pincode" className="col-sm-1 col-form-label mt-2">Pincode</label>
     <div className="col-sm-3">
       <input type="text" className="form-control mt-2" name="pincode" placeholder="Enter Pincode" {...register("pincode")}/>
     </div>
@@ -165,11 +164,11 @@ nationality:''
   </div>
   <div className="form-group row mb-3 mt-3">
     <h6>Other Details</h6>
-    <label for="occupation" className="col-sm-1 col-form-label">Occupation</label>
+    <label htmlFor="occupation" className="col-sm-1 col-form-label">Occupation</label>
     <div className="col-sm-3">
       <input type="text" className="form-control" name="occupation" placeholder="Enter Occupation" {...register("occupation")}/>
     </div>
-    <label for="religion" className="col-sm-1 col-form-label">Religion</label>
+    <label htmlFor="religion" className="col-sm-1 col-form-label">Religion</label>
     <div className="col-sm-2">
     <select className="form-select" aria-label="Default select example" name="religion" {...register("religion")}>
   <option value=""> Enter Religion</option>
@@ -178,7 +177,7 @@ nationality:''
   <option value="christan">Christan</option>
 </select>
     </div>
-    <label for="maritalstatus" className="col-sm-1 col-form-label">Marital Status </label>
+    <label htmlFor="maritalstatus" className="col-sm-1 col-form-label">Marital Status </label>
     <div className="col-sm-2">
     <select className="form-select" aria-label="Default select example" name="maritalstatus" {...register("maritalstatus")}>
   <option value=""> Enter Marital Status</option>
@@ -187,7 +186,7 @@ nationality:''
   
 </select>
     </div>
-    <label for="bloodgroup" className="col-sm-1 col-form-label formstyle" >Blood Group</label>
+    <label htmlFor="bloodgroup" className="col-sm-1 col-form-label formstyle" >Blood Group</label>
     <div className="col-sm-1">
     <select className="form-select" aria-label="Default select example" name="bloodgroup" {...register("bloodgroup")}>
   <option value="">Group</option>
@@ -196,7 +195,7 @@ nationality:''
   <option value="o+">o+</option>
 </select>
     </div>
-    <label for="nationality" className="col-sm-1 col-form-label mt-2">Nationality</label>
+    <label htmlFor="nationality" className="col-sm-1 col-form-label mt-2">Nationality</label>
     <div className="col-sm-3 mt-2">
     <div className="form-group" style={{position:'relative'}}>
     <input type="text" className="form-control" name="nationality" {...register("nationality")}/>   
